@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg py-5">
+      <div class="container-fluid active justify-content-around">
+        <div class="d-flex align-baseline">
+          <img src="images/logo.png" alt="" />
+          <a class="navbar-brand text-white mx-2 fw-bold" href="#">Weather</a>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a
+              class="nav-link btn btn-info rounded-pill px-4 bg-transparent text-white border-info py-1 mx-1 active"
+              aria-current="page"
+              href="#"
+              >Home</a
+            >
+            <a
+              class="nav-link btn btn-info rounded-pill px-4 bg-transparent text-white border-info py-1 mx-1"
+              href="#"
+              >News</a
+            >
+            <a
+              class="nav-link btn btn-info rounded-pill px-4 bg-transparent text-white border-info py-1 mx-1"
+              href="#"
+              >Live cameras</a
+            >
+            <a
+              class="nav-link btn btn-info rounded-pill px-4 bg-transparent text-white border-info py-1 mx-1"
+              href="#"
+              >Photos</a
+            >
+            <a
+              class="nav-link btn btn-info rounded-pill px-4 bg-transparent text-white border-info py-1 mx-1"
+              href="#"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="pb-5">
+      <div class="container w-50">
+        <div class="search d-flex flex-column">
+          <input
+            type="text"
+            placeholder="Find your location"
+            class="form-control py-3 rounded-pill mt-5 text-white px-4 border-0"
+            id="search"
+          />
+          <button class="btn btn-primary rounded-pill align-self-end px-4 py-2">
+            Find
+          </button>
+        </div>
+      </div>
+      <div class="weather container w-50">
+        <div class="row">
+          <div class="col-md-4 bg-lightgray text-white p-0 rounded-top-3">
+            <div
+              class="date d-flex justify-content-between rounded-3 px-2 py-2 w-100"
+            >
+              <span class="day" id="today">Friday</span>
+              <span class="day-date" id="todayDate">27June</span>
+            </div>
+            <div class="info px-3 mt-4">
+              <h1 id="location" class="fs-5">Cairo</h1>
+              <span class="temperature" id="todayTemperature">50</span><br />
+              <img
+                src="images/113.png"
+                class="forecast-icon"
+                id="todayForecastIcon"
+                alt=""
+              /><br />
+              <span class="forecast text-info" id="todayCondition">Mist</span>
+              <div class="mt-3">
+                <img src="images/icon-umberella.png" class="h-auto" alt="" />
+                <span class="me-2" id="rain">20%</span>
+                <img src="images/icon-wind.png" alt="" />
+                <span class="me-2" id="wind">18mph</span>
+                <img src="images/icon-compass.png" alt="" />
+                <span class="me-2" id="direction">east</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-4 col-sm-12 p-0 rounded-3 d-flex flex-column tomorrow-weather"
+          >
+            <div
+              class="tomorrow d-flex justify-content-center rounded-top-3 px-2 py-2 w-100"
+            >
+              <span id="day2date">Tomorrow</span>
+            </div>
+            <div
+              class="text-white d-flex flex-column align-items-center mt-5 align-items-center flex-grow-1"
+            >
+              <img src="images/113.png" id="day2icon" alt="" />
+              <span class="fw-bold fs-4" id="day2max">30</span>
+              <span id="day2min">20</span>
+              <span class="text-info" id="day2condition">Sunny</span>
+            </div>
+          </div>
+          <div
+            class="col-md-4 col-sm-12 p-0 rounded-top-3 d-flex flex-column bg-lightgray"
+          >
+            <div
+              class="date d-flex justify-content-center rounded-top-3 px-2 py-2 w-100"
+            >
+              <span id="day3date">Tomorrow</span>
+            </div>
+            <div
+              class="text-white d-flex flex-column align-items-center mt-5 flex-grow-1"
+            >
+              <img src="images/113.png" id="day3icon" alt="" />
+              <span class="fw-bold fs-4" id="day3max">30</span>
+              <span id="day3min">20</span>
+              <span class="text-info" id="day3condition">Sunny</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="py-5">
+      <div class="container">
+        <div class="d-flex align-baseline">
+          <div class="search d-flex flex-column w-75">
+            <input
+              type="text"
+              placeholder="Enter your email to subscribe"
+              class="form-control py-3 rounded-pill text-white px-4 border-0"
+            />
+            <button
+              class="btn btn-primary rounded-pill align-self-end px-4 py-2"
+            >
+              Subscribe
+            </button>
+          </div>
+          <div class="icons d-flex ms-5">
+            <i class="bi bi-facebook fs-4 text-info mx-2"></i>
+            <i class="bi bi-twitter fs-4 text-info mx-2"></i>
+            <i class="bi bi-google fs-4 text-info mx-2"></i>
+            <i class="bi bi-pinterest fs-4 text-info mx-2"></i>
+          </div>
+        </div>
+        <p class="text-white">
+          Copyright 2014 Company name. Designed by Themezy. All rights reserved
+        </p>
+      </div>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
